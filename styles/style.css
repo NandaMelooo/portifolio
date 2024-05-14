@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Definindo variaveis para cores globais do projeto */
+:root {
+    --cor-primaria:#222831; 
+    --cor-secundaria: #EEEEEE;
+    --cor-terciaria: #76ABAE; 
+    --cor-hover: #31363F;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+/* Reset de margens e paddings para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do corpo da página */
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria); /* Cor do texto */
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 20%;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+/* Estilo para o título destacado */
+.titulo-destaque {
+    color: var(--cor-terciaria); /* Cor do texto */
+}
+
+.apresentacao {
+    padding: 6%  20%;
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px
+}
+
+.apresentacao_conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+}
+
+.apresentacao_conteudo_titulo{
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao_conteudo_texto{
+    font-size: 1.25rem;
+    font-family: var(--fonte-secundaria);
+}
+
+
+.apresentacao_links{
+    display: flex; /*Coloca os quadrados lado a lado*/
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px; /*Propriedade que adiciono espaços iguais entre a propriedade (no caso os botões)*/
+
+}
+.apresentacao_link_subtitulo{
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.apresentacao_links_navegacao{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 21.5px 0; /*Primeiro valor eixo vertical e o segundo horizontal*/
+    text-decoration: none; 
+    color: var(--cor-secundaria);  
+    font-family: var(--fonte-secundaria);
+    /* box-shadow: 6px 10px grey; */
+}
+
+.apresentacao_links_botao:hover {
+    background-color: var(--cor-hover);
+
+}
+
+.foto_perfil{
+    width: 50%;
+    display: flex;
+    /*margin-top: 1.25rem;*/
+    border: 8px solid #2b5874;
+    border-radius: 10%;
+}
+
+.nome{ 
+    margin: 0;
+    color: #747c81;
+    margin-top: 20px;
+    display: flex;
+}
+
+.rodape_desenvolvimento{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 18px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho{
+        padding: 5%;
+        width: auto;
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse; /*o comando reverse aqui inverte a ordem que é mostrada no layout*/
+        padding: 5%;
+    }
+    .apresentacao_conteudo{
+        width: auto;
+    }
+    .foto_perfil{
+        justify-content: center;
+        align-items: center;
+    }
+   
+}
+
+
